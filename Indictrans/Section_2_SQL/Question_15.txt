@@ -1,0 +1,1 @@
+SELECT Id,Full_name,Salary FROM Employees ORDER BY Salary DESC LIMIT 5;

@@ -1,0 +1,1 @@
+SELECT * FROM Customers JOIN Order ON Customers.ID=Orders.Customer_ID GROUP BY Customers.ID HAVING COUNT(Orders.ID)>=1;

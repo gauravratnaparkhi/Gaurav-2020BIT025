@@ -1,0 +1,27 @@
+import java.util.*;
+public class Question_2 {
+	static ArrayList<Integer> even_list(int arr[],int n) {
+		ArrayList<Integer> ans=new ArrayList<>();
+		for(int i=0;i<n;i++) {
+			if(arr[i]%2==0) {
+				ans.add(arr[i]);
+			}
+		}
+		return ans;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+		}
+		ArrayList<Integer> ans1=even_list(arr,n);
+		for(int i=0;i<ans1.size();i++) {
+			System.out.print(ans1.get(i)+" ");
+		}
+
+	}
+
+}

@@ -1,0 +1,35 @@
+import java.util.*;
+public class Question_7 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String str=sc.nextLine();
+		int max=Integer.MIN_VALUE;
+		String ans="";
+		for(int i=0;i<str.length();i++) {
+			ArrayList<Character> list=new ArrayList<>();
+			String temp="";
+			boolean flag=false;
+			for(int j=i;j<str.length();j++) {
+				if(!list.contains(str.charAt(j))) {
+					temp+=str.charAt(j);
+					list.add(str.charAt(j));
+				}
+				else if(list.contains(str.charAt(j)) && temp.length()>max) {
+					ans=temp;
+					max=ans.length();
+					flag=true;
+					break;
+					
+				}
+			}
+			if(temp.length()>max) {
+				ans=temp;
+				max=ans.length();
+			}
+		}
+		System.out.println(ans+" "+ans.length());
+
+	}
+
+}

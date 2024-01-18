@@ -1,0 +1,1 @@
+SELECT Customers.Customer-Id,AVG(Orders.Gross_total) AS Average FROM Orders JOIN Customers ON Customers.Id=Orders.Customer_Id;

@@ -1,0 +1,1 @@
+SELECT * FROM Customers,COUNT(Orders.ID) FROM Customers JOIN Orders ON Customers.ID=Orders.Id ORDER BY COUNT(Orders.id) DESC LIMIT 3;
